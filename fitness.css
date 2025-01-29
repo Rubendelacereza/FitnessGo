@@ -58,15 +58,6 @@ body {
     align-items: center;
   }
   
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    background: linear-gradient(45deg, #00ff99, #00ffcc);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 10px rgba(0, 255, 153, 0.3);
-  }
-  
   main {
     padding-top: 60px;
   }
@@ -93,7 +84,7 @@ body {
     height: 200%;
     background: linear-gradient(45deg, 
       transparent 0%,
-      rgba(0, 255, 153, 0.1) 50%,
+      rgba(255, 217, 0, 0.1) 50%,
       transparent 100%);
     animation: shine 3s infinite linear;
   }
@@ -107,15 +98,15 @@ body {
     font-size: clamp(28px, 5vw, 36px);
     font-weight: 800;
     margin: 2rem 0;
-    text-shadow: 0 0 10px rgba(0, 255, 153, 0.5);
-    background: linear-gradient(45deg, #fff, #00ff99);
+    text-shadow: 0 0 10px rgba(251, 255, 0, 0.5);
+    background: linear-gradient(45deg, #ffffff, #ffbb00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: pulseText 2s infinite;
   }
   
   .cta-button {
-    background: linear-gradient(45deg, #00ff99, #00ffcc);
+    background: linear-gradient(45deg, #ffd900, #ffbb00);
     color: #000;
     font-size: 18px;
     font-weight: bold;
@@ -123,7 +114,7 @@ body {
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    box-shadow: 0 0 20px rgba(0, 255, 153, 0.4);
+    box-shadow: 0 0 20px rgba(255, 94, 0, 0.4);
     transform-style: preserve-3d;
     transition: all 0.3s ease;
     animation: float 3s infinite ease-in-out;
@@ -131,7 +122,7 @@ body {
   
   .cta-button:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 0 30px rgba(0, 255, 153, 0.6);
+    box-shadow: 0 0 30px rgba(255, 238, 0, 0.6);
   }
   
   /* Plan Cards Section */
@@ -143,7 +134,7 @@ body {
   .plan-cards h2 {
     font-size: clamp(24px, 4vw, 32px);
     margin-bottom: 2rem;
-    background: linear-gradient(45deg, #fff, #00ff99);
+    background: linear-gradient(45deg, #fff, #ffae00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -157,7 +148,7 @@ body {
   
   .card {
     background: rgba(34, 34, 34, 0.8);
-    border: 2px solid rgba(0, 255, 153, 0.2);
+    border: 2px solid rgba(255, 196, 0, 0.2);
     border-radius: 20px;
     padding: 2rem;
     transform-style: preserve-3d;
@@ -168,8 +159,8 @@ body {
   
   .card:hover {
     transform: translateY(-10px) scale(1.02);
-    border-color: #00ff99;
-    box-shadow: 0 15px 40px rgba(0, 255, 153, 0.2);
+    border-color: #ffe600;
+    box-shadow: 0 15px 40px rgba(255, 187, 0, 0.2);
   }
   
   .card-icon {
@@ -177,20 +168,20 @@ body {
   }
   
   .card-icon svg {
-    stroke: #00ff99;
-    filter: drop-shadow(0 0 5px rgba(0, 255, 153, 0.5));
+    stroke: #ffbb00;
+    filter: drop-shadow(0 0 5px rgba(255, 153, 0, 0.5));
     transition: all 0.3s ease;
   }
   
   .card:hover .card-icon svg {
     transform: scale(1.1);
-    filter: drop-shadow(0 0 10px rgba(0, 255, 153, 0.8));
+    filter: drop-shadow(0 0 10px rgba(255, 196, 0, 0.8));
   }
   
   .card h3 {
     font-size: 22px;
     margin-bottom: 1rem;
-    background: linear-gradient(45deg, #fff, #00ff99);
+    background: linear-gradient(45deg, #fff, #ffd000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -203,7 +194,7 @@ body {
   }
   
   .card-button {
-    background: linear-gradient(45deg, #00ff99, #00ffcc);
+    background: linear-gradient(45deg, #ff9900, #ffd000);
     color: #000;
     font-weight: bold;
     padding: 12px 24px;
@@ -214,7 +205,7 @@ body {
   
   .card-button:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 255, 153, 0.4);
+    box-shadow: 0 0 20px rgba(255, 217, 0, 0.4);
   }
   
   /* Filter Section */
@@ -235,14 +226,14 @@ body {
     background: rgba(51, 51, 51, 0.8);
     color: #fff;
     padding: 12px 24px;
-    border: 1px solid rgba(0, 255, 153, 0.2);
+    border: 1px solid rgba(255, 174, 0, 0.2);
     border-radius: 25px;
     transition: all 0.3s ease;
   }
   
   .filter-button:hover {
-    background: rgba(0, 255, 153, 0.2);
-    border-color: #00ff99;
+    background: rgba(255, 196, 0, 0.2);
+    border-color: #ff9900;
     transform: translateY(-2px);
   }
   
@@ -268,7 +259,7 @@ body {
   .testimonial {
     min-width: 280px;
     background: rgba(34, 34, 34, 0.8);
-    border: 1px solid rgba(0, 255, 153, 0.2);
+    border: 1px solid rgba(255, 251, 0, 0.2);
     border-radius: 20px;
     padding: 1.5rem;
     scroll-snap-align: center;
@@ -277,17 +268,17 @@ body {
   
   .testimonial:hover {
     transform: translateY(-5px);
-    border-color: #00ff99;
-    box-shadow: 0 10px 30px rgba(0, 255, 153, 0.2);
+    border-color: #ffc400;
+    box-shadow: 0 10px 30px rgba(255, 208, 0, 0.2);
   }
   
   .testimonial-img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    border: 2px solid #00ff99;
+    border: 2px solid #ff9100;
     margin-bottom: 1rem;
-    box-shadow: 0 0 15px rgba(0, 255, 153, 0.3);
+    box-shadow: 0 0 15px rgba(255, 230, 0, 0.3);
   }
   
   @keyframes shine {
