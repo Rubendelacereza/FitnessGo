@@ -62,14 +62,14 @@ header .cta-header-button {
 }
 
 .video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: -1;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Video detrás del contenido */
+}
 
 .video-background video {
   min-width: 100%;
@@ -84,8 +84,8 @@ header .cta-header-button {
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 10; /* Los botones deben estar encima del video */
 }
 
 .hero h1 {
@@ -127,15 +127,25 @@ header .cta-header-button {
     transform: scale(1);
   }
 }
+@keyframes slideUpButton {
+  from {
+      transform: translateY(20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
 
 .cards {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;
-    gap: 15px; 
-    margin-top: 30px;
-    position: relative;
-    z-index: 1;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 15px; 
+  margin-top: 30px;
+  position: relative;
+  z-index: 10; /* Asegura que las tarjetas estén por encima del video */
 }
 
 .card {
@@ -143,17 +153,37 @@ header .cta-header-button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.1);
     padding: 15px; 
     border-radius: 10px;
     text-decoration: none;
     color: white;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 45%; 
     min-width: 140px;
+  background: linear-gradient(45deg, rgba(255,165,0,0.3), rgba(255,255,0,0.3));
 }
+.card:nth-child(2) {
+  background: linear-gradient(45deg, rgba(0,128,255,0.3), rgba(0,255,255,0.3));
+}
+.card:nth-child(3) {
+    background: linear-gradient(45deg, rgba(0,255,0,0.3), rgba(173,255,47,0.3));
+}
+
 .card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.card:hover:nth-child(1) {
+  background: linear-gradient(45deg, rgba(255, 100, 0, 0.5), rgba(255, 200, 0, 0.5));
+}
+
+.card:hover:nth-child(2) {
+    background: linear-gradient(45deg, rgba(0, 100, 255, 0.5), rgba(0, 200, 255, 0.5));
+}
+
+.card:hover:nth-child(3) {
+    background: linear-gradient(45deg, rgba(0, 200, 0, 0.5), rgba(173, 255, 47, 0.5));
 }
 
 
@@ -163,14 +193,14 @@ header .cta-header-button {
     margin-bottom: 10px;
 }
 main {
-    background: linear-gradient(to bottom, transparent 50%, lime,  blue);
-    background-blend-mode: screen;
-    position: absolute;
-    left:0;
-    right:0;
-    top:0;
-    bottom: 0;
-    z-index: -2;
+  background: linear-gradient(to bottom, transparent 50%, lime,  blue);
+  background-blend-mode: screen;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1; /* Ajustamos el z-index para que esté por encima de los elementos del fondo pero por debajo del contenido */
 }
 .inspiration {
   position: relative;
