@@ -83,6 +83,26 @@ header .cta-header-button {
   transform: translate(-50%, -50%);
   object-fit: cover;
 }
+#chat-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgb(255 174 0 / 96%);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+#chat-icon:hover {
+  transform: scale(1.1);
+}
 
 .hero-content {
   position: relative;
