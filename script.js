@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //fitness.html
 // Add smooth scrolling to buttons
+// Add smooth scrolling to buttons
 document.querySelectorAll('button').forEach(button => {
   button.addEventListener('click', (e) => {
     e.preventDefault();
@@ -22,6 +23,22 @@ window.addEventListener('scroll', () => {
   const hero = document.querySelector('.hero');
   const scrolled = window.pageYOffset;
   hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+  
+  // Show/hide back to top button
+  const backToTop = document.querySelector('.back-to-top');
+  if (scrolled > 300) {
+    backToTop.classList.add('visible');
+  } else {
+    backToTop.classList.remove('visible');
+  }
+});
+
+// Back to top functionality
+document.querySelector('.back-to-top').addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 });
 
 // Add intersection observer for animations
@@ -40,6 +57,11 @@ document.querySelectorAll('.card, .testimonial').forEach(element => {
   element.style.opacity = '0';
   element.style.transform = 'translateY(20px)';
   observer.observe(element);
+});
+
+// Add back button functionality
+document.querySelector('.back-button').addEventListener('click', () => {
+  window.history.back();
 });
 
 console.log('JavaScript is active.');
